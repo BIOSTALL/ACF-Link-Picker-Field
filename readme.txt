@@ -53,6 +53,13 @@ array(3) {
   string(6) "_blank"
 }*/`
 
+== Screenshots ==
+
+1. Selecting the 'Link Picker' field type when setting up the field
+2. No link selected. The user can click 'Insert Link'
+3. Presented with the standard and familiar popup dialog box
+4. Once selected the user can see the current link, edit it and remove it
+
 == Changelog ==
 
 = 1.0.0 =

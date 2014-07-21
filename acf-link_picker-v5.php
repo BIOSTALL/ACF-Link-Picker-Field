@@ -128,6 +128,12 @@ class acf_field_link_picker extends acf_field {
 			print_r( $field );
 		echo '</pre>';*/
 		
+		$exists = true;
+        if ($field['value'] === FALSE || (isset($field['value']['url']) && $field['value']['url'] == ''))
+        {
+            $exists = false;
+        }
+		
 		?>
 		<div id="link-picker-<?php echo $field['key']; ?>-wrap">
             <p>

@@ -138,26 +138,26 @@ class acf_field_link_picker extends acf_field {
         }
 		
 		?>
-		<div id="link-picker-<?php echo $field['key']; ?>-wrap">
+		<div id="link-picker-<?php echo $field['id']; ?>-wrap">
             <p>
                 <?php _e('Currently selected page:', 'acf-link_picker'); ?>
                 
-                <input type="hidden" name="<?php echo $field['name']; ?>[url]" id="link-picker-<?php echo $field['key']; ?>-url" value="<?php echo $field['value']['url']; ?>">
-                <input type="hidden" name="<?php echo $field['name']; ?>[title]" id="link-picker-<?php echo $field['key']; ?>-title" value="<?php echo $field['value']['title']; ?>">
-                <input type="hidden" name="<?php echo $field['name']; ?>[target]" id="link-picker-<?php echo $field['key']; ?>-target" value="<?php echo $field['value']['target']; ?>">
+                <input type="hidden" name="<?php echo $field['name']; ?>[url]" id="link-picker-<?php echo $field['id']; ?>-url" value="<?php echo $field['value']['url']; ?>">
+                <input type="hidden" name="<?php echo $field['name']; ?>[title]" id="link-picker-<?php echo $field['id']; ?>-title" value="<?php echo $field['value']['title']; ?>">
+                <input type="hidden" name="<?php echo $field['name']; ?>[target]" id="link-picker-<?php echo $field['id']; ?>-target" value="<?php echo $field['value']['target']; ?>">
                 
-                <div id="link-picker-<?php echo $field['key']; ?>-exists"<?php if (!$exists) { echo ' style="display:none;"'; } ?>>
-                    <?php _e('URL'); ?>: <em id="link-picker-<?php echo $field['key']; ?>-url-label"><a href="<?php echo $field['value']['url']; ?>" target="_blank"><?php echo $field['value']['url']; ?></a></em><br>
-                    <?php _e('Title'); ?>: <em id="link-picker-<?php echo $field['key']; ?>-title-label"><?php echo $field['value']['title']; ?></em><br>
-                    <?php _e('Open link in a new window/tab'); ?>: <em id="link-picker-<?php echo $field['key']; ?>-target-label"><?php if ($field['value']['target'] == '_blank') { _e('Yesssss'); } else { _e('No'); } ?></em>
+                <div id="link-picker-<?php echo $field['id']; ?>-exists"<?php if (!$exists) { echo ' style="display:none;"'; } ?>>
+                    <?php _e('URL'); ?>: <em id="link-picker-<?php echo $field['id']; ?>-url-label"><a href="<?php echo $field['value']['url']; ?>" target="_blank"><?php echo $field['value']['url']; ?></a></em><br>
+                    <?php _e('Title'); ?>: <em id="link-picker-<?php echo $field['id']; ?>-title-label"><?php echo $field['value']['title']; ?></em><br>
+                    <?php _e('Open link in a new window/tab'); ?>: <em id="link-picker-<?php echo $field['id']; ?>-target-label"><?php if ($field['value']['target'] == '_blank') { _e('Yesssss'); } else { _e('No'); } ?></em>
                 </div>
-                <div id="link-picker-<?php echo $field['key']; ?>-none"<?php if ($exists) { echo ' style="display:none;"'; } ?>>
+                <div id="link-picker-<?php echo $field['id']; ?>-none"<?php if ($exists) { echo ' style="display:none;"'; } ?>>
                     <em><?php _e('No link selected yet', 'acf-link_picker'); ?></em>
                 </div>
             </p>
             <p>
-                <a href="" class="link-btn acf-button grey" id="link-picker-<?php echo $field['key']; ?>"><?php if (!$exists) { _e('Insert Link', 'acf-link_picker'); }else{ _e('Edit Link', 'acf-link_picker'); } ?></a>
-                <a href="" class="link-remove-btn acf-button grey" id="link-picker-<?php echo $field['key']; ?>-remove"<?php if (!$exists) { echo ' style="display:none;"'; } ?>><?php _e('Remove Link', 'acf-link_picker'); ?></a>
+                <a href="" class="link-btn acf-button grey" id="link-picker-<?php echo $field['id']; ?>"><?php if (!$exists) { _e('Insert Link', 'acf-link_picker'); }else{ _e('Edit Link', 'acf-link_picker'); } ?></a>
+                <a href="" class="link-remove-btn acf-button grey" id="link-picker-<?php echo $field['id']; ?>-remove"<?php if (!$exists) { echo ' style="display:none;"'; } ?>><?php _e('Remove Link', 'acf-link_picker'); ?></a>
             </p>
         </div>
         <?php

@@ -132,7 +132,7 @@ class acf_field_link_picker extends acf_field {
 		echo '</pre>';*/
 		
 		$exists = true;
-        if ($field['value'] === FALSE || (isset($field['value']['url']) && $field['value']['url'] == ''))
+        if ( !$field['value'] || $field['value'] === FALSE || (isset($field['value']['url']) && $field['value']['url'] == '') )
         {
             $exists = false;
         }

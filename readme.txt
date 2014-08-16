@@ -1,5 +1,5 @@
 === Advanced Custom Fields: Link Picker Field ===
-Contributors: Steve Marks (BIOSTALL)
+Contributors: BIOSTALL
 Tags: acf, advanced custom fields, link picker, link chooser, acf link picker
 Requires at least: 3.5
 Tested up to: 3.9.2

@@ -32,12 +32,26 @@ var doingLink = '';
                 
                 jQuery('#' + doingLink + '-url-label').html('<a href="' + linkAtts.href + '" target="_blank">' + linkAtts.href + '</a>');
                 jQuery('#' + doingLink + '-title-label').html(linkAtts.title);
-                jQuery('#' + doingLink + '-target-label').html((linkAtts.target == '_blank') ? acf._e('link_picker', 'yes') : acf._e('link_picker', 'no'));
-                
+				if (typeof acf._e != 'undefined')
+				{
+					jQuery('#' + doingLink + '-target-label').html((linkAtts.target == '_blank') ? acf._e('link_picker', 'yes') : acf._e('link_picker', 'no'));
+                }
+				else
+				{
+					jQuery('#' + doingLink + '-target-label').html((linkAtts.target == '_blank') ? 'Yes' : 'No');
+				}
+				
                 jQuery('#' + doingLink + '-none').hide();
                 jQuery('#' + doingLink + '-exists').show();
                 
-                jQuery('#' + doingLink).html(acf._e('link_picker', 'edit_link'));
+				if (typeof acf._e != 'undefined')
+				{
+					jQuery('#' + doingLink).html(acf._e('link_picker', 'edit_link'));
+				}
+				else
+				{
+					jQuery('#' + doingLink).html('Edit Link');
+				}
                 jQuery('#' + doingLink + '-remove').fadeIn('fast');
                 
                 wpLink.textarea = jQuery('body'); // to close the link dialogue, it is again expecting an wp_editor instance, so you need to give it something to set focus back to. In this case, I'm using body, but the textfield with the URL would be fine
@@ -64,8 +78,15 @@ var doingLink = '';
             jQuery('#' + doingLink + '-none').show();
             jQuery('#' + doingLink + '-exists').hide();
             
-            jQuery('#' + doingLink).html(acf._e('link_picker', 'insert_link'));
-            jQuery('#' + doingLink + '-remove').fadeOut('fast');
+			if (typeof acf._e != 'undefined')
+			{
+				jQuery('#' + doingLink).html(acf._e('link_picker', 'insert_link'));
+            }
+			else
+			{
+				jQuery('#' + doingLink).html('Insert Link');
+			}
+			jQuery('#' + doingLink + '-remove').fadeOut('fast');
             
             doingLink = '';
             

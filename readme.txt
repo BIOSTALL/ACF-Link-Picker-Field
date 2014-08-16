@@ -2,7 +2,7 @@
 Contributors: Steve Marks (BIOSTALL)
 Tags: acf, advanced custom fields, link picker, link chooser, acf link picker
 Requires at least: 3.5
-Tested up to: 3.8.1
+Tested up to: 3.9.2
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -61,6 +61,10 @@ array(3) {
 4. Once selected the user can see the current link, edit it and remove it
 
 == Changelog ==
+
+= 1.0.1 =
+* Solve bug with repeater fields (credit to Willy Bahuaud http://wabeo.fr/)
+* Solve problem with empty values (credit to Willy Bahuaud http://wabeo.fr/)
 
 = 1.0.0 =
 * Initial Release.

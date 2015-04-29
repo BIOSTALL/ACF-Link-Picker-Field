@@ -88,7 +88,7 @@
             {
                 var linkAtts = wpLink.getAttrs(); // the links attributes (href, target) are stored in an object, which can be access via  wpLink.getAttrs()
                 // title is no longer included (as of 4.2)
-                if (!('title' in linkAtts) {
+                if (!('title' in linkAtts)) {
                     linkAtts.title = $("#wp-link-text").val();
                 }
 

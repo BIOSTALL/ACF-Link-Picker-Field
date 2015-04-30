@@ -144,8 +144,8 @@ class acf_field_link_picker extends acf_field {
                 	<?php _e('Currently selected page:', 'acf-link_picker'); ?>
                 </p>
                 
-                <input type="hidden" class="link-picker-url-input" name="<?php echo $field['name']; ?>[url]" id="link-picker-<?php echo $field['id']; ?>-url" value="<?php echo $field['value']['url']; ?>">
-                <input type="hidden" class="link-picker-title-input" name="<?php echo $field['name']; ?>[title]" id="link-picker-<?php echo $field['id']; ?>-title" value="<?php echo $field['value']['title']; ?>">
+                <input type="hidden" name="<?php echo $field['name']; ?>[url]" id="link-picker-<?php echo $field['id']; ?>-url" value="<?php echo $field['value']['url']; ?>">
+                <input type="hidden" name="<?php echo $field['name']; ?>[title]" id="link-picker-<?php echo $field['id']; ?>-title" value="<?php echo $field['value']['title']; ?>">
                 <input type="hidden" name="<?php echo $field['name']; ?>[target]" id="link-picker-<?php echo $field['id']; ?>-target" value="<?php echo $field['value']['target']; ?>">
                 
                 <div id="link-picker-<?php echo $field['id']; ?>-exists"<?php if (!$exists) { echo ' style="display:none;"'; } ?>>

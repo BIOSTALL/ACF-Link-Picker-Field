@@ -28,10 +28,13 @@
             var $lp_input = $(this).closest('.acf-input');
 
             if (typeof wpLink !== 'undefined') {
-                var current_url = $lp_input.find('.link-picker-url-input').val();
-                var current_title = $lp_input.find('.link-picker-title-input').val();
+                var current_url = $('#' + doingLink + '-url').val();
+                var current_title = $('#' + doingLink + '-title').val();
                 
+                // save any existing default initialization
                 wplink_defaults = wpLink.setDefaultValues;
+
+                // initialize with current URL and title
                 wpLink.setDefaultValues = function () { 
                     var $inputs = $('#wp-link').find('input[type=text]');
                     $($inputs[1]).val(current_title);
@@ -66,10 +69,10 @@
             $('#' + doingLink + '-remove').fadeOut('fast');
     
             trap_events(event);
-            
             return false;
         });
 
+        // initizialize wplink button handlers, but only do it once
         if (!modal_bound) {
             bind_wplink_handlers();
             modal_bound = true;
@@ -77,6 +80,10 @@
     }
 
     function reset_wplink() {
+        wpLink.textarea = $('body'); // to close the link dialogue, it is again expecting an wp_editor instance, so you need to give it something to set focus back to. In this case, I'm using body, but the textfield with the URL would be fine
+        wpLink.close();// close the dialogue
+
+        // restore wplink default initialization
         wpLink.setDefaultValues = wplink_defaults;
         doingLink = '';
     }
@@ -84,6 +91,7 @@
     function bind_wplink_handlers() {
         $('body').on('click', '#wp-link-submit', function(event) 
         {
+            // ignore this handler if we're not running a link-picker
             if (doingLink !== '')
             {
                 var linkAtts = wpLink.getAttrs(); // the links attributes (href, target) are stored in an object, which can be access via  wpLink.getAttrs()
@@ -91,9 +99,6 @@
                 if (!('title' in linkAtts)) {
                     linkAtts.title = $("#wp-link-text").val();
                 }
-
-                //console.log('#' + doingLink + '-url');
-                //console.log($('#' + doingLink + '-url').length);
                 
                 $('#' + doingLink + '-url').val(linkAtts.href);
                 $('#' + doingLink + '-title').val(linkAtts.title);
@@ -125,12 +130,8 @@
                 
                 $('#' + doingLink + '-remove').fadeIn('fast');
                 
-                wpLink.textarea = $('body'); // to close the link dialogue, it is again expecting an wp_editor instance, so you need to give it something to set focus back to. In this case, I'm using body, but the textfield with the URL would be fine
-                wpLink.close();// close the dialogue
-                
                 trap_events(event);
-                
-                reset_wplink();
+                close_wplink();
                 return false;
             }
         });
@@ -138,16 +139,11 @@
 
         $('body').on('click', '#wp-link-close, #wp-link-cancel a', function(event) 
         {
+            // ignore this handler if we're not running a link-picker
             if (doingLink !== '')
             {
-                wpLink.textarea = $('body');
-                wpLink.close();
-                
                 trap_events(event);
-
-                // reset
-                reset_wplink();
-
+                close_wplink();
                 return false;
             }
         });

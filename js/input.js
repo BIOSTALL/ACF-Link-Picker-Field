@@ -24,8 +24,6 @@
 
             var thisID = $(this).attr("id");
             doingLink = thisID;
-            
-            var $lp_input = $(this).closest('.acf-input');
 
             if (typeof wpLink !== 'undefined') {
                 var current_url = $('#' + doingLink + '-url').val();

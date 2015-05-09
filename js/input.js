@@ -129,7 +129,7 @@
                 $('#' + doingLink + '-remove').fadeIn('fast');
                 
                 trap_events(event);
-                close_wplink();
+                reset_wplink();
                 return false;
             }
         });
@@ -141,7 +141,7 @@
             if (doingLink !== '')
             {
                 trap_events(event);
-                close_wplink();
+                reset_wplink();
                 return false;
             }
         });

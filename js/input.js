@@ -62,7 +62,7 @@
             }
             else
             {
-                $('#' + doingLink).html('Insert Link');
+                $('#' + doingLink).html(translations.insert_link);
             }
             $('#' + doingLink + '-remove').fadeOut('fast');
     
@@ -111,7 +111,7 @@
                 }
                 else
                 {
-                  $('#' + doingLink + '-target-label').html((linkAtts.target == '_blank') ? 'Yes' : 'No');
+                  $('#' + doingLink + '-target-label').html((linkAtts.target == '_blank') ? translations.yes : translations.no);
                 }
                 
                 $('#' + doingLink + '-none').hide();
@@ -123,7 +123,7 @@
                 }
                 else
                 {
-                  $('#' + doingLink).html('Edit Link');
+                  $('#' + doingLink).html(translations.edit_link);
                 }
                 
                 $('#' + doingLink + '-remove').fadeIn('fast');

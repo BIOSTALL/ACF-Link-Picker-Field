@@ -1,0 +1,46 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Daniel Klotz <shout@m0n0mind.net>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de_DE\n"
+"X-Generator: Poedit 1.7.5\n"
+
+msgid "Currently selected page"
+msgstr "Aktuelle Auswahl"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Title"
+msgstr "Titel"
+
+msgid "Open in new window"
+msgstr "In neuem Fenster öffnen"
+
+msgid "Open link in a new window/tab"
+msgstr "In neuem Fenster/Tab öffnen"
+
+msgid "Yes"
+msgstr "Ja"
+
+msgid "No"
+msgstr "Nein"
+
+msgid "No link selected yet"
+msgstr "Kein Link ausgewählt"
+
+msgid "Edit Link"
+msgstr "Link bearbeiten"
+
+msgid "Insert Link"
+msgstr "Link einfügen"
+
+msgid "Remove Link"
+msgstr "Link entfernen"

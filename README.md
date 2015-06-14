@@ -1,6 +1,6 @@
 # Advanced Custom Fields: Link Picker Field
 
-Contributors: BIOSTALL, ahebrank
+Contributors: BIOSTALL, ahebrank, m0n0mind
 
 Tags: acf, advanced custom fields, link picker, link chooser, acf link picker
 
@@ -75,7 +75,7 @@ array(3) {
 
 ## Changelog
 
-###m 1.0.3
+### 1.0.3
 - Translation support from [m0n0mind](https://github.com/m0n0mind)
 
 ### 1.0.2

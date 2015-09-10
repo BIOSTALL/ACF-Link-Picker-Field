@@ -28,13 +28,22 @@
             if (typeof wpLink !== 'undefined') {
                 var current_url = $('#' + doingLink + '-url').val();
                 var current_title = $('#' + doingLink + '-title').val();
+                var current_target = $('#' + doingLink + '-target').val();
                 
                 // save any existing default initialization
                 wplink_defaults = wpLink.setDefaultValues;
 
                 // initialize with current URL and title
                 wpLink.setDefaultValues = function () { 
-                    var $inputs = $('#wp-link').find('input[type=text]');
+                    var $inputs = $('#wp-link').find('input[type=text],input[type=checkbox]');
+                    if(current_target === "_blank")
+                    {
+                        $($inputs[2])[0].checked = true;
+                    }
+                    else
+                    {
+                        $($inputs[2])[0].checked = false;
+                    }
                     $($inputs[1]).val(current_title);
                     $($inputs[0]).val(current_url);
                 };

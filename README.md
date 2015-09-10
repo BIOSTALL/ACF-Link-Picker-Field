@@ -1,6 +1,6 @@
 # Advanced Custom Fields: Link Picker Field
 
-Contributors: BIOSTALL, ahebrank, m0n0mind
+Contributors: BIOSTALL, ahebrank, m0n0mind, philmprice
 
 Tags: acf, advanced custom fields, link picker, link chooser, acf link picker
 

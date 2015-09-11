@@ -6,7 +6,7 @@ Tags: acf, advanced custom fields, link picker, link chooser, acf link picker
 
 Requires at least: 3.5
 
-Tested up to: 4.2
+Tested up to: WP 4.3
 
 Stable tag: trunk
 
@@ -74,6 +74,9 @@ array(3) {
 4. Once selected the user can see the current link, edit it and remove it
 
 ## Changelog
+
+### 1.1
+- Bump version, preserve _blank target if set from [philmprice](https://github.com/philmprice)
 
 ### 1.0.3
 - Translation support from [m0n0mind](https://github.com/m0n0mind)

@@ -2,9 +2,9 @@
 
 /*
 Plugin Name: Advanced Custom Fields: Link Picker
-Plugin URI: http://biostall.com
+Plugin URI: https://github.com/ahebrank/ACF-Link-Picker-Field
 Description: Adds an Advanced Custom Field field that allows the selection of a link utilising the WordPress link picker modal dialog
-Version: 1.0.2
+Version: 1.1
 Author: Steve Marks (BIOSTALL)
 Author URI: http://biostall.com
 License: GPLv2 or later

@@ -35,17 +35,14 @@
 
                 // initialize with current URL and title
                 wpLink.setDefaultValues = function () { 
-                    var $inputs = $('#wp-link').find('input[type=text],input[type=checkbox]');
-                    if(current_target === "_blank")
-                    {
-                        $($inputs[2])[0].checked = true;
-                    }
-                    else
-                    {
-                        $($inputs[2])[0].checked = false;
-                    }
-                    $($inputs[1]).val(current_title);
-                    $($inputs[0]).val(current_url);
+                    // set the current title and URL
+                    var $text_inputs = $('#wp-link').find('input[type=text]');
+                    $($text_inputs[1]).val(current_title);
+                    $($text_inputs[0]).val(current_url);
+
+                    // target a blank page?
+                    var $checkbox_inputs = $('#wp-link').find('input[type=checkbox]');
+                    $checkbox_inputs.first().prop('checked', (current_target === '_blank'));
                 };
                 wpLink.open(thisID); // open the link popup
             }

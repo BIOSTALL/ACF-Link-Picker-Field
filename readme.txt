@@ -22,8 +22,8 @@ Note: Advanced Custom Fields must be installed for this add-on to work.
 
 This ACF field type is compatible with:
 
--	ACF 5
--	ACF 4
+*	ACF 5
+*	ACF 4
 
 == Installation ==
 

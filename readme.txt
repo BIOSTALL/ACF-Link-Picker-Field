@@ -3,7 +3,7 @@
 Contributors: BIOSTALL, caalami
 Tags: acf, advanced custom fields, link picker, link chooser, acf link picker
 Requires at least: 3.5
-Tested up to: WP 4.3
+Tested up to: 4.4.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -56,6 +56,10 @@ Outputs:
 }`
 
 == Changelog ==
+
+= 1.1.1 =
+* Added PT translation support from [alvarogois](https://github.com/alvarogois)
+* Bumped compatibility information
 
 = 1.1 =
 * Bump version, preserve _blank target if set from [philmprice](https://github.com/philmprice)

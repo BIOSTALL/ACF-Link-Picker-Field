@@ -1,0 +1,52 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: ACF Link Picker Field\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Vadiem Janssens <info@vadiemjanssens.nl>\n"
+"Language-Team: Vadiem Janssens <info@vadiemjanssens.nl>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl_NL\n"
+"X-Generator: Poedit 1.8.6\n"
+
+msgid "Choice"
+msgstr "Kies"
+
+msgid "Something Else"
+msgstr "Iets anders"
+
+msgid "Currently selected page"
+msgstr "Geselecteerde pagina"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Title"
+msgstr "Titel"
+
+msgid "Open in new window"
+msgstr "Open in nieuw venster"
+
+msgid "Yes"
+msgstr "Ja"
+
+msgid "No"
+msgstr "Nee"
+
+msgid "No link selected yet"
+msgstr "Geen link geselecteerd"
+
+msgid "Insert Link"
+msgstr "Link invoegen"
+
+msgid "Edit Link"
+msgstr "Link aanpassen"
+
+msgid "Remove Link"
+msgstr "Link verwijderen"
+
+msgid "Open link in a new window/tab"
+msgstr "Open link in een nieuw venster/tab"

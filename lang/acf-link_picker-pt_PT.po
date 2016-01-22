@@ -1,0 +1,46 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: ACF Link Picker Field\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Alvaro Gois dos Santos <alvarogois@ovni.org>\n"
+"Language-Team: Álvaro Góis <alvarogois@ovni.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_PT\n"
+"X-Generator: Poedit 1.8.6\n"
+
+msgid "Currently selected page"
+msgstr "Página atualmente selecionada"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Title"
+msgstr "Título"
+
+msgid "Open in new window"
+msgstr "Abrir numa nova janela"
+
+msgid "Open link in a new window/tab"
+msgstr "Abrir link numa nova janela/separador"
+
+msgid "Yes"
+msgstr "Sim"
+
+msgid "No"
+msgstr "Não"
+
+msgid "No link selected yet"
+msgstr "Ainda não existe um link selecionado."
+
+msgid "Edit Link"
+msgstr "Editar link"
+
+msgid "Insert Link"
+msgstr "Inserir link"
+
+msgid "Remove Link"
+msgstr "Apagar link"

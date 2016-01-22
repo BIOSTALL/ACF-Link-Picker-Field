@@ -139,25 +139,48 @@ class acf_field_link_picker extends acf_field {
 		
 		?>
 		<div id="link-picker-<?php echo $field['id']; ?>-wrap">
-            <p>
-                <?php _e('Currently selected page:', 'acf-link_picker'); ?>
+    		<div>
+    		    <?php if ($exists) : ?>
+               	<p>
+                	<?php _e('Currently selected page', 'acf-link_picker'); ?>
+                </p>
+            	<?php endif; ?>
                 
                 <input type="hidden" name="<?php echo $field['name']; ?>[url]" id="link-picker-<?php echo $field['id']; ?>-url" value="<?php echo $field['value']['url']; ?>">
                 <input type="hidden" name="<?php echo $field['name']; ?>[title]" id="link-picker-<?php echo $field['id']; ?>-title" value="<?php echo $field['value']['title']; ?>">
                 <input type="hidden" name="<?php echo $field['name']; ?>[target]" id="link-picker-<?php echo $field['id']; ?>-target" value="<?php echo $field['value']['target']; ?>">
                 
                 <div id="link-picker-<?php echo $field['id']; ?>-exists"<?php if (!$exists) { echo ' style="display:none;"'; } ?>>
-                    <?php _e('URL'); ?>: <em id="link-picker-<?php echo $field['id']; ?>-url-label"><a href="<?php echo $field['value']['url']; ?>" target="_blank"><?php echo $field['value']['url']; ?></a></em><br>
-                    <?php _e('Title'); ?>: <em id="link-picker-<?php echo $field['id']; ?>-title-label"><?php echo $field['value']['title']; ?></em><br>
-                    <?php _e('Open link in a new window/tab'); ?>: <em id="link-picker-<?php echo $field['id']; ?>-target-label"><?php if ($field['value']['target'] == '_blank') { _e('Yesssss'); } else { _e('No'); } ?></em>
+                    <?php _e('URL', 'acf-link_picker'); ?>: 
+                    	<em id="link-picker-<?php echo $field['id']; ?>-url-label">
+                    		<a href="<?php echo $field['value']['url']; ?>" target="_blank">
+                    			<?php echo $field['value']['url']; ?>
+                    		</a>
+                    	</em>
+                    	<br>
+
+                    <?php _e('Title', 'acf-link_picker'); ?>: 
+                    	<em id="link-picker-<?php echo $field['id']; ?>-title-label">
+                    		<?php echo $field['value']['title']; ?>
+                    	</em>
+                    	<br>
+
+                    <?php _e('Open link in a new window/tab', 'acf-link_picker'); ?>: 
+                    	<em id="link-picker-<?php echo $field['id']; ?>-target-label">
+                    		<?php if ($field['value']['target'] == '_blank') { _e('Yes', 'acf-link_picker'); } else { _e('No', 'acf-link_picker'); } ?>
+                    	</em>
                 </div>
                 <div id="link-picker-<?php echo $field['id']; ?>-none"<?php if ($exists) { echo ' style="display:none;"'; } ?>>
                     <em><?php _e('No link selected yet', 'acf-link_picker'); ?></em>
                 </div>
-            </p>
+            </div>
             <p>
-                <a href="" class="link-btn acf-button grey" id="link-picker-<?php echo $field['id']; ?>"><?php if (!$exists) { _e('Insert Link', 'acf-link_picker'); }else{ _e('Edit Link', 'acf-link_picker'); } ?></a>
-                <a href="" class="link-remove-btn acf-button grey" id="link-picker-<?php echo $field['id']; ?>-remove"<?php if (!$exists) { echo ' style="display:none;"'; } ?>><?php _e('Remove Link', 'acf-link_picker'); ?></a>
+                <a href="" class="link-btn acf-button grey" id="link-picker-<?php echo $field['id']; ?>">
+                	<?php if (!$exists) { _e('Insert Link', 'acf-link_picker'); }else{ _e('Edit Link', 'acf-link_picker'); } ?>
+                </a>
+                <a href="" class="link-remove-btn acf-button grey" id="link-picker-<?php echo $field['id']; ?>-remove"<?php if (!$exists) { echo ' style="display:none;"'; } ?>>
+                	<?php _e('Remove Link', 'acf-link_picker'); ?>
+                </a>
             </p>
         </div>
         <?php
@@ -184,6 +207,16 @@ class acf_field_link_picker extends acf_field {
 		
 		// register & include JS
 		wp_register_script( 'acf-input-link_picker', "{$dir}js/input.js" );
+
+		$translations = array(
+			'insert_link' => __('Insert Link', 'acf-link_picker'),
+			'edit_link' => __('Edit Link', 'acf-link_picker'),
+			'yes' => __('Yes', 'acf-link_picker'),
+			'no' => __('No', 'acf-link_picker')
+		);
+
+		wp_localize_script('acf-input-link_picker', 'translations', $translations);
+
 		wp_enqueue_script('acf-input-link_picker');
 		
 		

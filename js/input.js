@@ -8,6 +8,7 @@ var doingLink = '';
 		
         jQuery('body').on('click', '.link-btn', function(event) 
         {
+            event.preventDefault ? event.preventDefault() : event.returnValue = false;            
             var thisID = jQuery(this).attr("id");
             doingLink = thisID;
             

@@ -64,7 +64,7 @@ class acf_field_link_picker extends acf_field {
 		*/
 		
 		// key is needed in the field names to correctly save the data
-		$key = $field['name'];
+		$key = $field['id'];
 		
 		
 		// Create Field Options HTML
@@ -126,26 +126,26 @@ class acf_field_link_picker extends acf_field {
         
 		// create Field HTML
 		?>
-		<div id="link-picker-<?php echo $field['key']; ?>-wrap">
+		<div id="link-picker-<?php echo $field['id']; ?>-wrap">
             <p>
                 Currently selected page:
                 
-                <input type="hidden" name="<?php echo $field['name']; ?>[url]" id="link-picker-<?php echo $field['key']; ?>-url" value="<?php echo $field['value']['url']; ?>">
-                <input type="hidden" name="<?php echo $field['name']; ?>[title]" id="link-picker-<?php echo $field['key']; ?>-title" value="<?php echo $field['value']['title']; ?>">
-                <input type="hidden" name="<?php echo $field['name']; ?>[target]" id="link-picker-<?php echo $field['key']; ?>-target" value="<?php echo $field['value']['target']; ?>">
+                <input type="hidden" name="<?php echo $field['name']; ?>[url]" id="link-picker-<?php echo $field['id']; ?>-url" value="<?php echo $field['value']['url']; ?>">
+                <input type="hidden" name="<?php echo $field['name']; ?>[title]" id="link-picker-<?php echo $field['id']; ?>-title" value="<?php echo $field['value']['title']; ?>">
+                <input type="hidden" name="<?php echo $field['name']; ?>[target]" id="link-picker-<?php echo $field['id']; ?>-target" value="<?php echo $field['value']['target']; ?>">
                 
-                <div id="link-picker-<?php echo $field['key']; ?>-exists"<?php if (!$exists) { echo ' style="display:none;"'; } ?>>
-                    URL: <em id="link-picker-<?php echo $field['key']; ?>-url-label"><a href="<?php echo $field['value']['url']; ?>" target="_blank"><?php echo $field['value']['url']; ?></a></em><br>
-                    Title: <em id="link-picker-<?php echo $field['key']; ?>-title-label"><?php echo $field['value']['title']; ?></em><br>
-                    Open in new window: <em id="link-picker-<?php echo $field['key']; ?>-target-label"><?php if (isset($field['value']['target']) && $field['value']['target'] == '_blank') { echo 'Yes'; } ?></em>
+                <div id="link-picker-<?php echo $field['id']; ?>-exists"<?php if (!$exists) { echo ' style="display:none;"'; } ?>>
+                    URL: <em id="link-picker-<?php echo $field['id']; ?>-url-label"><a href="<?php echo $field['value']['url']; ?>" target="_blank"><?php echo $field['value']['url']; ?></a></em><br>
+                    Title: <em id="link-picker-<?php echo $field['id']; ?>-title-label"><?php echo $field['value']['title']; ?></em><br>
+                    Open in new window: <em id="link-picker-<?php echo $field['id']; ?>-target-label"><?php if (isset($field['value']['target']) && $field['value']['target'] == '_blank') { echo 'Yes'; } ?></em>
                 </div>
-                <div id="link-picker-<?php echo $field['key']; ?>-none"<?php if ($exists) { echo ' style="display:none;"'; } ?>>
+                <div id="link-picker-<?php echo $field['id']; ?>-none"<?php if ($exists) { echo ' style="display:none;"'; } ?>>
                     <em>No link selected yet</em>
                 </div>
             </p>
             <p>
-                <a href="" class="link-btn acf-button grey" id="link-picker-<?php echo $field['key']; ?>"><?php if (!$exists) { echo 'Insert'; }else{ echo 'Edit'; } ?> Link</a>
-                <a href="" class="link-remove-btn acf-button grey" id="link-picker-<?php echo $field['key']; ?>-remove"<?php if (!$exists) { echo ' style="display:none;"'; } ?>>Remove Link</a>
+                <a href="" class="link-btn acf-button grey" id="link-picker-<?php echo $field['id']; ?>"><?php if (!$exists) { echo 'Insert'; }else{ echo 'Edit'; } ?> Link</a>
+                <a href="" class="link-remove-btn acf-button grey" id="link-picker-<?php echo $field['id']; ?>-remove"<?php if (!$exists) { echo ' style="display:none;"'; } ?>>Remove Link</a>
             </p>
 		</div>
 		<?php
